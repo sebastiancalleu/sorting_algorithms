@@ -24,4 +24,6 @@ listint_t *create_listint(const int *, size_t);
 void insertion_sort_list(listint_t **);
 void selection_sort(int *, size_t);
 int sortcheck(int *);
+int countnodes(listint_t *);
+void nodeswaper(listint_t **, listint_t **, listint_t **, int );
 #endif
