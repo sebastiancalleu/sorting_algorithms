@@ -19,12 +19,12 @@ void nodeswaper(listint_t **tmp1, listint_t **tmp2, listint_t **list, int size)
 {
 	if (size > 2)
 	{
-		if ((*tmp1)->prev == NULL && (*tmp2)->next != NULL)
+		if ((*tmp1)->prev == NULL)
 		{
 			(*tmp2)->next->prev = *tmp1;
 			*list = *tmp2;
 		}
-		else if ((*tmp1)->next->next == NULL && (*tmp1)->prev != NULL)
+		else if ((*tmp1)->next->next == NULL)
 			(*tmp1)->prev->next = *tmp2;
 		else
 		{
@@ -58,6 +58,8 @@ void insertion_sort_list(listint_t **list)
 	listint_t *tmp, *tmp1, *tmp2;
 	int  flag = 1, size;
 
+	if (list == NULL || *list == NULL)
+		return;
 	tmp = *list;
 	size = countnodes(*list);
 
