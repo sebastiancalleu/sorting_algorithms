@@ -61,9 +61,6 @@ void insertion_sort_list(listint_t **list)
 	tmp = *list;
 	size = countnodes(*list);
 
-	if (list == NULL || (*list)->next == NULL)
-		return;
-
 	if (size > 1)
 	{
 		while (flag != 0)
@@ -72,7 +69,7 @@ void insertion_sort_list(listint_t **list)
 			while (tmp)
 			{
 				if (tmp->next == NULL)
-					break;
+					return;
 				if (tmp->n > tmp->next->n)
 				{
 					tmp1 = tmp;
