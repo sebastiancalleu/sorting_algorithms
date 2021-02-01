@@ -60,6 +60,10 @@ void insertion_sort_list(listint_t **list)
 
 	tmp = *list;
 	size = countnodes(*list);
+
+	if (list == NULL || (*list)->next == NULL)
+		return;
+
 	if (size > 1)
 	{
 		while (flag != 0)
