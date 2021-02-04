@@ -29,5 +29,6 @@ void nodeswaper(listint_t **, listint_t **, listint_t **, int);
 void quick_sort(int *, size_t);
 void quicsortrec(int *, int, int, int);
 int lomutopart(int *, int, int, int);
+void shell_sort(int *, size_t);
 
 #endif
